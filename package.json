@@ -1,0 +1,19 @@
+{
+  "name": "toolbox",
+  "private": true,
+  "workspaces": [
+    "backend",
+    "frontend"
+  ],
+  "devDependencies": {
+    "@commitlint/cli": "^19.8.1",
+    "@commitlint/config-conventional": "^19.8.1",
+    "biome": "^0.3.3",
+    "husky": "^9.1.7"
+  },
+  "scripts": {
+    "lint": "npm --workspace backend run lint && npm --workspace frontend run lint",
+    "check": "npm --workspace backend run check && npm --workspace frontend run check",
+    "test": "(npm --workspace backend test && npm --workspace frontend test) 2>&1 | grep -v 'npm warn Unknown env config'"
+  }
+}

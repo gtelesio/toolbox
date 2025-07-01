@@ -1,0 +1,54 @@
+{
+  "info": {
+    "_postman_id": "toolbox-backend-collection",
+    "name": "Toolbox Backend API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Get Files Data",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3001/api/v1/files/data",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3001",
+          "path": ["api", "v1", "files", "data"]
+        }
+      }
+    },
+    {
+      "name": "Get Files Data (with fileName)",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3001/api/v1/files/data?fileName=file1.csv",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3001",
+          "path": ["api", "v1", "files", "data"],
+          "query": [
+            { "key": "fileName", "value": "file1.csv" }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Get Files List",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3001/api/v1/files/list",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3001",
+          "path": ["api", "v1", "files", "list"]
+        }
+      }
+    }
+  ]
+} 

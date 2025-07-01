@@ -1,0 +1,22 @@
+services:
+  backend:
+    build: ./backend
+    container_name: toolbox-backend
+    ports:
+      - "3001:3001"
+    volumes:
+      - ./backend:/usr/src/app
+    working_dir: /usr/src/app
+    command: sh -c "yarn install && yarn dev"
+    restart: always
+
+  frontend:
+    build: ./frontend
+    container_name: toolbox-frontend
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./frontend:/usr/src/app
+    working_dir: /usr/src/app
+    command: sh -c "yarn install && yarn dev"
+    restart: always 
